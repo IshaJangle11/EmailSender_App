@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{title}}</title>
+</head>
+
+
+
+
+
+
+{% load static %}
+    <style>
+        body{
+            background-image:url('{% static "images/img6.png"%}');
+            background-size:100%;
+            background-repeat:no-repeat;
+
+
+        }
+.container{
+            background-color: #f0f7ffba;
+    border: 2px solid white;
+    margin: 50px 375px;
+    padding: 21px 41px;
+    width: 34%;
+    border-radius: 23px;
+}
+input[type=text]:focus{
+     background-color: lightblue;
+}
+input[type=submit]{
+   text-align: center;
+    background-color: cornflowerblue;
+}
+.header{
+        background-color: #03a9f4a3;
+     padding :20px;
+     text-align:center;
+ }
+.header h1{
+    color:white;
+}
+input[type=text]{
+      input[type=text]{
+       padding: 3px 8px;
+    text-align: left;
+        width: 55%;}
+</style>
+<body>
+<div class="header">
+<h1>  </h1>
+</div>
+<div class="col-lg-6"></div>
+<!--            <div class="col-lg-1"><a href="fetch"><button class="btn btn-danger"align="right">Fetch the inbox</button>
+--> </a></div>
+ </div>
+<div class="container">
+<form action="{%url 'email' %}" method="post" >
+    {% csrf_token %}
+
+<label for="fname">Name:</label><br>
+<input type="text" id="fname" name="fname" placeholder="enter your name..." style="height: 23px;
+    width: 407px"><br>
+
+
+<label for="email">Gmail:</label><br>
+<input type="email" id="email" name="toemail"placeholder="enter your gmail..."style="height: 23px;
+    width: 407px" ><br><br>
+
+
+<label for="subject">Subject:</label><br>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:41px;
+    width: 416px;" rows="4" cols="43"></textarea><br><br><br<br>
+
+
+
+<label for="messege">Messege:</label><br>
+<textarea id="messege" name="messege"  placeholder="Write something.." style="height:102px;width: 413px" rows="4" cols="43"></textarea><br><br>
+
+
+<br><br>
+<input type="submit" name="submit" value="send">
+
+</form>
+
+</div>
+</html>
